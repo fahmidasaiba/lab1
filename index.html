@@ -3,22 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lab</title>
 </head>
 <body>
-    <div class="circular_image">
-        <img src="https://img.freepik.com/free-vector/app-development-mobile-template_23-2148681251.jpg?semt=ais_hybrid"/>
-      </div>
-      
-      <br><br>
-      
-   
-    <h1>WEB TECHNOLOGIES</h1>
-    <div style="background-color: slategray;height:500px;width:400px">
-    <div style="background-color: skyblue;height:300px;width:200px"></div>
-    <div style="background-color: slateblue;height:200px;width:200px"></div>
+    <title>Lab work</title>
+    <div style="display: flex; justify-content: center;">
+    <img src="https://static.vecteezy.com/system/resources/previews/010/166/168/non_2x/fis-letter-logo-design-on-white-background-fis-creative-initials-letter-logo-concept-fis-letter-design-vector.jpg" style="height: 50px; width: 50px;" alt="fis-letter-logo-design-on-white-background-fis-creative-initials-letter-logo-concept-fis-letter-design-vector">
+    </div>
+    <div style="display: flex; justify-content: center;">
+        <h4>profile</h4>
     </div>
 
+    <div style="display: flex; flex-direction: row; justify-content: center;" >
+        <div style="display: flex; flex-direction: column;">
+            <div style="background-color: navajowhite; height: 450px; width: 300px;">
+
+    <form onsubmit="return validate(event)">
+    <div id="data" style="color: purple;"></div>
+
+    <div style="display: flex; flex-direction: row; justify-content: center;">
+    <h3>Registration</h3>
+    </div>
+
+    <div class="container">
+                  <div style="display: flex; flex-direction: column; justify-content: center; text-align: start;">
+                   <label for="name"> Name:</label>
+                   <input type="text" id="name" name="name">
+                   </div>
+                   <br>
+                    <label for="gender"><b></b>Gender:</label>b></label>
+                    <input type="radio" name="gender" value="male" checked> Male
+                    
+                    <input type="radio" name="gender" value="female"> Female
+                    
+                    <input type="radio" name="gender" value="other"> Other
+                    <br>
+                    <div style="display: flex; flex-direction: column; justify-content: center;">
+
+                    </div>
+                    <label for="uemail"><b>Useremail:</b></label>
+                    <input type="email" id="email" name="email" placeholder="youremailid@gmail.com">
+                    <br> 
+                    <label for="udob"><b>Userdob:</b></label>
+                    <input type="date" id="birth" name="birth">
+                    <br>
+
+                   <label for="countrys"><b>Choose country:</b></label>
+                   <select name="countrys" id="countrys">
+                   <option value="bangladesh">Bangladesh</option>
+                   <option value="pakistan">Pakistan</option>
+                   <option value="morocco">Morocco</option>
+                   <option value="india">India</option>
+                   <option value="angola">Angola</option>
+                   <option value="azerbaijan">Azerbaijan</option>
+                   <option value="barma">Barma</option>
+                   <option value="oman">Oman</option>
+                   </select>  
+                   <br>
+
+                    <label for="psw"><b>Password:</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <label for="conpass">Confirm Password:</label>
+                    <input type="password" id="conpass" name="conpass"> 
+                    <br>
+                    <label for="opinion">Your Opinion:</label><br>
+                    <textarea id="opinion" name="opinion" rows="4" cols="50"></textarea>
+                    <br>
+
+                    <label for="bgc">Background Color:</label>
+                    <input type="color" id="bgc" name="bgc">
+
+                    <button type="submit">Submit</button>
+    </form>
+    </div>
+    <!--<div style="background-color: navajowhite; height: 300px; width: 200px;" >box1</div>-->
+    <div style="background-color: chocolate; height: 200px; width: 200px;" >
+                box2
+    </div>
+    </div>
+
+    <div style="background-color: rgb(186, 87, 157); height: 500px; width: 200px;" >
+            box3
+    </div>
+    </div>
+
+    <script>
+        let x = document.getElementById('fullname'); // DOM object
+       
+        function validate(event)
+        {
+            event.preventDefault();
+            let regex = /^[a-zA-Z.\- ]+$/;  // REGEX to check for digits
+            if (!regex.test(x.value)) {
+                document.getElementById('data').innerHTML = "Invalid input.";
+                return false; // Prevent form submission
+            }
+            document.getElementById('data').innerHTML = "Valid input.";
+            return true; // Allow form submissionfor demonstration
+        }
+    </script>
 
 </body>
 </html>
