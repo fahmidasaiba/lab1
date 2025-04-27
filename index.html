@@ -1,107 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab</title>
 </head>
+
 <body>
     <title>Lab work</title>
     <div style="display: flex; justify-content: center;">
-    <img src="https://static.vecteezy.com/system/resources/previews/010/166/168/non_2x/fis-letter-logo-design-on-white-background-fis-creative-initials-letter-logo-concept-fis-letter-design-vector.jpg" style="height: 50px; width: 50px;" alt="fis-letter-logo-design-on-white-background-fis-creative-initials-letter-logo-concept-fis-letter-design-vector">
+        <img src="https://static.vecteezy.com/system/resources/previews/010/166/168/non_2x/fis-letter-logo-design-on-white-background-fis-creative-initials-letter-logo-concept-fis-letter-design-vector.jpg"
+            style="height: 50px; width: 50px;"
+            alt="fis-letter-logo-design-on-white-background-fis-creative-initials-letter-logo-concept-fis-letter-design-vector">
     </div>
     <div style="display: flex; justify-content: center;">
         <h4>profile</h4>
     </div>
 
-    <div style="display: flex; flex-direction: row; justify-content: center;" >
-        <div style="display: flex; flex-direction: column;">
-            <div style="background-color: navajowhite; height: 450px; width: 300px;">
+    <div style="display: flex;  justify-content: center;">
+        <div>
+            <div style="background-color: navajowhite; height: 400px; width: 300px;">
 
-    <form onsubmit="return validate(event)">
-    <div id="data" style="color: purple;"></div>
-
-    <div style="display: flex; flex-direction: row; justify-content: center;">
-    <h3>Registration</h3>
-    </div>
-
-    <div class="container">
-                  <div style="display: flex; flex-direction: column; justify-content: center; text-align: start;">
-                   <label for="name"> Name:</label>
-                   <input type="text" id="name" name="name">
-                   </div>
-                   <br>
-                    <label for="gender"><b></b>Gender:</label>b></label>
-                    <input type="radio" name="gender" value="male" checked> Male
-                    
-                    <input type="radio" name="gender" value="female"> Female
-                    
-                    <input type="radio" name="gender" value="other"> Other
-                    <br>
-                    <div style="display: flex; flex-direction: column; justify-content: center;">
-
+                <form onsubmit="return validate()">
+                   
+                    <div style="display: flex; justify-content: center;">
+                        <h3>Registration</h3>
                     </div>
-                    <label for="uemail"><b>Useremail:</b></label>
-                    <input type="email" id="email" name="email" placeholder="youremailid@gmail.com">
-                    <br> 
-                    <label for="udob"><b>Userdob:</b></label>
-                    <input type="date" id="birth" name="birth">
-                    <br>
 
-                   <label for="countrys"><b>Choose country:</b></label>
-                   <select name="countrys" id="countrys">
-                   <option value="bangladesh">Bangladesh</option>
-                   <option value="pakistan">Pakistan</option>
-                   <option value="morocco">Morocco</option>
-                   <option value="india">India</option>
-                   <option value="angola">Angola</option>
-                   <option value="azerbaijan">Azerbaijan</option>
-                   <option value="barma">Barma</option>
-                   <option value="oman">Oman</option>
-                   </select>  
-                   <br>
+                    <div class="container">
+                        
+                        <div id="errormessage" style="color: red;"></div>
+                        <label for="name"><b> Name:</b></label>
+                        <input type="text" id="name" name="name">
+                        <br>
+                        
 
-                    <label for="psw"><b>Password:</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
-                    <label for="conpass">Confirm Password:</label>
-                    <input type="password" id="conpass" name="conpass"> 
-                    <br>
-                    <label for="opinion">Your Opinion:</label><br>
-                    <textarea id="opinion" name="opinion" rows="4" cols="50"></textarea>
-                    <br>
+                        <label for="gender"><b>Gender:</b></label>
+                        <input type="radio" id="Male" name="gender" value="male" checked> Male
+                        <input type="radio" id="Female" value="female"> Female
+                        <input type="radio" id="Other" value="other"> Other
+                        <br>
 
-                    <label for="bgc">Background Color:</label>
-                    <input type="color" id="bgc" name="bgc">
+                        <label for="udob"><b>Userdob:</b></label>
+                        <input type="date" id="birth" name="birth">
+                        <br>
 
-                    <button type="submit">Submit</button>
-    </form>
+                        <label for="uemail"><b>Useremail:</b></label>
+                        <input type="email" id="email" name="email" placeholder="emailid@gmail.com">
+                        <br>
+
+
+                        <label for="psw"><b>Password:</b></label>
+                        <input type="password" placeholder="Enter Password" id="pass" name="psw">
+                        <label for="conpass"><b>Confirm Password:</b></label>
+                        <input type="password" id="conpass" name="conpass">
+                        <br>
+
+                        <label for="countrys"><b>Choose country:</b></label>
+                        <select name="countrys" id="countrys">
+                            <option value="bangladesh">Bangladesh</option>
+                            <option value="pakistan">Pakistan</option>
+                            <option value="morocco">Morocco</option>
+                            <option value="india">India</option>
+                            <option value="angola">Angola</option>
+                            <option value="azerbaijan">Azerbaijan</option>
+                            <option value="barma">Barma</option>
+                            <option value="oman">Oman</option>
+                        </select>
+                        <br>
+
+                        <label for="opinion">Your Opinion:</label><br>
+                        <textarea id="opinion" name="opinion" rows="4" cols="30"></textarea>
+                        <br>
+
+                        <label for="bgc">Background Color:</label>
+                        <input type="color" id="bgc" name="bgc">
+                         
+
+
+                        <input type="submit" name="submit" value="submit" onclick="return validate()">
+                        
+                </form>
+            </div>
+
+            <!--<div style="background-color: navajowhite; height: 300px; width: 200px;" >box1</div>-->
+           
+           
+            
+        </div>
+        <div style="background-color: chocolate; height: 180px; width: 300px;">
+            box2
+        </div>
+  
     </div>
-    <!--<div style="background-color: navajowhite; height: 300px; width: 200px;" >box1</div>-->
-    <div style="background-color: chocolate; height: 200px; width: 200px;" >
-                box2
-    </div>
-    </div>
-
-    <div style="background-color: rgb(186, 87, 157); height: 500px; width: 200px;" >
+    <div
+            style="background-color: rgb(186, 87, 157); height: 580px; width: 300px; display: flex; flex-direction: column;">
             box3
-    </div>
+        </div>
     </div>
 
     <script>
-        let x = document.getElementById('fullname'); // DOM object
+        function validate() {
+        let name = document.getElementById('name').value;;
+        let udob = document.getElementById('birth').value;
+        let email = document.getElementById('email').value;
+        let pass = document.getElementById('pass').value;
+        let conpass = document.getElementById('conpass').value;
+
+        
+        const nameRegex = /^[A-Za-z\s]+$/;
+        const emailRegex =  /^[\w.-]+@(gmail|hotmail|yahoo)\.com$/;
+        const passwordRegex =  /^(?=.*[a-zA-Z])(?=.*\d).+$/;
+        
+
+        const dobDate = new Date(udob);
+        const age = new Date().getFullYear() - dobDate.getFullYear();
+        const isValidAge = age > 18;
+    
+
+    
+    if (name == "" || email == "" || pass == "" || conpass == "") {
+        document.getElementById('errormessage').innerHTML = "Please fill out all fields.";
+        
+        return false;
+    }
+    if(!isValidAge){
+        document.getElementById('errormessage').innerHTML = "Age must be above 18.";
+        
+        return false;
+    }
+    if (!nameRegex.test(name)) {
+        document.getElementById('errormessage').innerHTML = "Name should only contain letters ,dots and spaces.";
+        
+        return false;
+    }
+    if (!emailRegex.test(email)) {
+        document.getElementById('errormessage').innerHTML = "Email must be in the format: name@gmail/hotmail/yahoo.com";
+        
+        return false;
+    }
+    if (!passwordRegex.test(pass)) {
+        document.getElementById('errormessage').innerHTML = "Password should contain letters and numbers.";
+        
+        return false;
+    }
+    
+    if (pass != conpass) {
+        document.getElementById('errormessage').innerHTML = "Passwords do not match.";
        
-        function validate(event)
-        {
-            event.preventDefault();
-            let regex = /^[a-zA-Z.\- ]+$/;  // REGEX to check for digits
-            if (!regex.test(x.value)) {
-                document.getElementById('data').innerHTML = "Invalid input.";
-                return false; // Prevent form submission
-            }
-            document.getElementById('data').innerHTML = "Valid input.";
-            return true; // Allow form submissionfor demonstration
-        }
+        return false;
+    }
+    
+    alert("Submitted successfully!");
+    
+
+    return true;
+
+    }
     </script>
 
 </body>
+
 </html>
