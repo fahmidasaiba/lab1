@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab</title>
+    <title>AQI</title>
+    <link rel="stylesheet" href="aqi.css">
 </head>
 
 <body>
@@ -15,13 +16,13 @@
             alt="fis-letter-logo-design-on-white-background-fis-creative-initials-letter-logo-concept-fis-letter-design-vector">
     </div>
     <div style="display: flex; justify-content: center;">
-        <h4>profile</h4>
+        <h4>AQI</h4>
     </div>
 
     <div style="display: flex;  justify-content: center;">
         <div>
-            <div style="background-color: navajowhite; height: 400px; width: 300px;">
-
+            <div style="background-color: navajowhite; height: 500px; width: 300px;">
+                box1
                 <form onsubmit="return validate()">
                    
                     <div style="display: flex; justify-content: center;">
@@ -31,33 +32,33 @@
                     <div class="container">
                         
                         <div id="errormessage" style="color: red;"></div>
-                        <label for="name"><b> Name:</b></label>
+                        <label for="name"><b> Name: </b></label><br>
                         <input type="text" id="name" name="name">
                         <br>
                         
 
-                        <label for="gender"><b>Gender:</b></label>
+                        <label for="gender"><b>Gender:</b></label><br>
                         <input type="radio" id="Male" name="gender" value="male" checked> Male
-                        <input type="radio" id="Female" value="female"> Female
-                        <input type="radio" id="Other" value="other"> Other
+                        <input type="radio" id="Female" name="gender" value="female"> Female
+                        <input type="radio" id="Other" name="gender" value="other"> Other
                         <br>
 
-                        <label for="udob"><b>Userdob:</b></label>
+                        <label for="udob"><b>Userdob:</b></label><br>
                         <input type="date" id="birth" name="birth">
                         <br>
 
-                        <label for="uemail"><b>Useremail:</b></label>
+                        <label for="uemail"><b>Useremail:</b></label><br>
                         <input type="email" id="email" name="email" placeholder="emailid@gmail.com">
                         <br>
 
 
-                        <label for="psw"><b>Password:</b></label>
-                        <input type="password" placeholder="Enter Password" id="pass" name="psw">
-                        <label for="conpass"><b>Confirm Password:</b></label>
+                        <label for="psw"><b>Password:</b></label><br>
+                        <input type="password" placeholder="Enter Password" id="pass" name="psw"><br>
+                        <label for="conpass"><b>Confirm Password:</b></label><br>
                         <input type="password" id="conpass" name="conpass">
                         <br>
 
-                        <label for="countrys"><b>Choose country:</b></label>
+                        <label for="countrys"><b>Choose country:</b></label><br>
                         <select name="countrys" id="countrys">
                             <option value="bangladesh">Bangladesh</option>
                             <option value="pakistan">Pakistan</option>
@@ -89,76 +90,64 @@
            
             
         </div>
-        <div style="background-color: chocolate; height: 180px; width: 300px;">
+        <div style="background-color: chocolate; height: 300px; width: 300px;">
             box2
+
+
+            <form >
+                <div style="display: flex; justify-content: center;">
+                    <h3>LOGIN</h3>
+                </div>
+                <div class="container">
+                  <label for="uname"><b>Username</b></label>
+                  <input type="text" placeholder="Enter Username"id="uname" name="uname" required>
+              
+                  <label for="psw"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password"id=psw name="psw" required><br>
+                  <span class="psw">Forgot <a href="#">password?</a></span>
+                  <button type="submit">Login</button>
+                  
+                </div>
+              
+                 
+            
+              </form>
         </div>
   
     </div>
     <div
-            style="background-color: rgb(186, 87, 157); height: 580px; width: 300px; display: flex; flex-direction: column;">
+            style="background-color: rgb(223, 157, 203); height: 800px; width: 300px; display: flex; flex-direction: column;">
             box3
+               
+            <div style="display: flex; justify-content: center;">
+                <h4>City Air Quality Index (AQI)</h4>
+            </div>
+            <table class="center">
+                
+                <tr>
+                <th>City</th>
+                <th>AQI</th>
+                </tr>
+                
+                
+                <tr><td>Dhaka</td><td>80</td></tr>
+                <tr><td>Los Angeles</td><td>72</td></tr>
+                <tr><td>Chicago</td><td>65</td></tr>
+                <tr><td>New York</td><td>80</td></tr>
+                <tr><td>Phoenix</td><td>90</td></tr>
+                <tr><td>Philadelphia</td><td>60</td></tr>
+                <tr><td>San Antonio</td><td>75</td></tr>
+                <tr><td>San Diego</td><td>58</td></tr>
+                <tr><td>Dallas</td><td>77</td></tr>
+                <tr><td>San Jose</td><td>50</td></tr>
+                
+            </table>
+
+        
         </div>
     </div>
 
-    <script>
-        function validate() {
-        let name = document.getElementById('name').value;;
-        let udob = document.getElementById('birth').value;
-        let email = document.getElementById('email').value;
-        let pass = document.getElementById('pass').value;
-        let conpass = document.getElementById('conpass').value;
-
-        
-        const nameRegex = /^[A-Za-z\s]+$/;
-        const emailRegex =  /^[\w.-]+@(gmail|hotmail|yahoo)\.com$/;
-        const passwordRegex =  /^(?=.*[a-zA-Z])(?=.*\d).+$/;
-        
-
-        const dobDate = new Date(udob);
-        const age = new Date().getFullYear() - dobDate.getFullYear();
-        const isValidAge = age > 18;
-    
-
-    
-    if (name == "" || email == "" || pass == "" || conpass == "") {
-        document.getElementById('errormessage').innerHTML = "Please fill out all fields.";
-        
-        return false;
-    }
-    if(!isValidAge){
-        document.getElementById('errormessage').innerHTML = "Age must be above 18.";
-        
-        return false;
-    }
-    if (!nameRegex.test(name)) {
-        document.getElementById('errormessage').innerHTML = "Name should only contain letters ,dots and spaces.";
-        
-        return false;
-    }
-    if (!emailRegex.test(email)) {
-        document.getElementById('errormessage').innerHTML = "Email must be in the format: name@gmail/hotmail/yahoo.com";
-        
-        return false;
-    }
-    if (!passwordRegex.test(pass)) {
-        document.getElementById('errormessage').innerHTML = "Password should contain letters and numbers.";
-        
-        return false;
-    }
-    
-    if (pass != conpass) {
-        document.getElementById('errormessage').innerHTML = "Passwords do not match.";
-       
-        return false;
-    }
-    
-    alert("Submitted successfully!");
-    
-
-    return true;
-
-    }
-    </script>
+    <script src="validation.js"></script>
 
 </body>
 

@@ -1,0 +1,75 @@
+.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .table-container {
+  
+    width: 70%;
+  
+    margin: auto;
+  
+    padding: 5px;
+  
+    background: #ffffff;
+  
+    border-radius: 12px;
+  
+    box-shadow: 10 4px 10px rgb black;
+  
+  }
+  
+  .table-container h2 {
+  
+    margin-bottom: 20px;
+  
+    color: #333;
+  
+    font-weight: 300;
+  
+  }
+  
+  table {
+  
+    width: 70%;
+  
+    border-collapse: separate;
+  
+    border-spacing: 10 15px;
+  
+  }
+  
+  th {
+  
+    text-align: left;
+  
+    padding: 5px;
+  
+    background-color: transparent;
+  
+    color: #555;
+  
+    font-size: 16px;
+  
+    border-bottom: 2px solid :pink;
+  
+  }
+  
+  td {
+  
+    background-color:pink;
+  
+    padding: 10px 10px;
+  
+    border-radius: 6px;
+  
+    border: 1px solid #ddd;
+  
+  }
+  
+  tr:hover td {
+  
+    background-color: #eef7ee;
+  
+  } 
+ 
